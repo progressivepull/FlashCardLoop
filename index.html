@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flash Card Application</title>
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+
+        body { padding: 30px; }
+        .flash-card {
+            margin-bottom: 20px;
+        }
+    
+
+        body { padding: 30px; }
+        #termBox, #definitionBox {
+            font-size: 1.4rem;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        #termBox { background: #e3f2fd; }
+        #definitionBox { background: #fff3cd; margin-top: 15px; display: none; }
+    
+        #cardList {
+            margin-top: 30px;
+        }
+        .mode-section {
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="mb-4">Flash Card Application</h2>
+
+    <div class="mb-3">
+        <label class="form-label">Choose Flash Card JSON File:</label>
+        <input type="file" id="jsonFile" class="form-control" accept=".json">
+    </div>
+
+    <div class="mb-4">
+        <button id="flashBtn" class="btn btn-primary me-2">Flash Card</button>
+        <button id="defBtn" class="btn btn-warning me-2">Definition</button>
+        <button id="nextBtn" class="btn btn-success me-2">Next</button>
+        <button id="loadBtn" class="btn btn-secondary">Load All Cards</button>
+    </div>
+
+    <div class="mode-section">
+        <div id="termBox" class="border"></div>
+        <div id="definitionBox" class="border"></div>
+    </div>
+
+    <div id="cardList"></div>
+</div>
+
+<script>
+$(document).ready(function () {
+    let cards = [];
+    let index = 0;
+
+    // Load the selected JSON file once.
+    $("#jsonFile").change(function () {
+        const file = this.files[0];
+        if (!file) return;
+
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            try {
+                const data = JSON.parse(e.target.result);
+
+                if (!Array.isArray(data.cards)) {
+                    throw new Error("JSON must contain a cards array.");
+                }
+
+                cards = data.cards;
+                index = 0;
+
+                $("#termBox").text("File loaded. Click Flash Card.");
+                $("#definitionBox").hide();
+                $("#cardList").empty();
+
+            } catch (err) {
+                alert("Invalid JSON file. Expected an object containing a 'cards' array.");
+                console.error(err);
+            }
+        };
+
+        reader.readAsText(file);
+    });
+
+    // Show the current term.
+    $("#flashBtn").click(function () {
+        if (cards.length === 0) {
+            alert("Load a JSON file first.");
+            return;
+        }
+
+        $("#termBox").text(cards[index].term || "");
+        $("#definitionBox").hide();
+    });
+
+    // Show the current definition.
+    $("#defBtn").click(function () {
+        if (cards.length === 0) {
+            alert("Load a JSON file first.");
+            return;
+        }
+
+        $("#definitionBox").text(cards[index].definition || "").show();
+    });
+
+    // Move to the next card.
+    $("#nextBtn").click(function () {
+        if (cards.length === 0) {
+            alert("Load a JSON file first.");
+            return;
+        }
+
+        index++;
+        if (index >= cards.length) {
+            index = 0;
+        }
+
+        $("#termBox").text(cards[index].term || "");
+        $("#definitionBox").hide();
+    });
+
+    // Display all cards.
+    $("#loadBtn").click(function () {
+        if (cards.length === 0) {
+            alert("Load a JSON file first.");
+            return;
+        }
+
+        $("#cardList").empty();
+
+        cards.forEach(function (card) {
+            const cardHtml = `
+                <div class="card flash-card">
+                    <div class="card-body">
+                        <h5 class="card-title"></h5>
+                        <p class="card-text"></p>
+                    </div>
+                </div>
+            `;
+
+            const $card = $(cardHtml);
+            $card.find(".card-title").text(card.term || "");
+            $card.find(".card-text").text(card.definition || "");
+
+            $("#cardList").append($card);
+        });
+    });
+});
+</script>
+
+</body>
+</html>
