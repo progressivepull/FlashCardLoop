@@ -1,21 +1,31 @@
-body { padding: 30px; }
+body {
+  padding: 30px;
+}
+
 .flash-card {
     margin-bottom: 20px;
 }
 
-
-body { padding: 30px; }
 #termBox, #definitionBox {
     font-size: 1.4rem;
     padding: 20px;
     border-radius: 8px;
 }
-#termBox { background: #e3f2fd; }
-#definitionBox { background: #fff3cd; margin-top: 15px; display: none; }
+
+#termBox {
+  background: #e3f2fd;
+}
+
+#definitionBox {
+  background: #fff3cd;
+  margin-top: 15px;
+  display: none;
+}
 
 #cardList {
     margin-top: 30px;
 }
+
 .mode-section {
     margin-top: 25px;
 }
