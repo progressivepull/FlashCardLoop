@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Flash Card Loop</title>
 
+  <!-- Standard favicon -->
+    <link rel="icon" href="./app/favicon_io/favicon.ico" sizes="any">
+
+    <!-- PNG favicons -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./app/favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./app/favicon-32x32.png">
+
+    <!-- Android Chrome -->
+    <link rel="icon" type="image/png" sizes="192x192" href="./app/favicon_io/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="./app/favicon_io/android-chrome-512x512.png">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./app/favicon_io/apple-touch-icon.png">
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="./app/favicon_io/site.webmanifest">
+
     <!-- LearnLoop Stylesheet -->
     <link href="./app/index.css" rel="stylesheet" />
 
@@ -23,8 +40,9 @@
 </head>
 <body>
 
+<div class="top-banner"></div>
+
 <div class="container">
-    <h2 class="mb-4">Flash Card Application</h2>
 
     <div class="mb-3">
         <label class="form-label">Choose Flash Card JSON File:</label>
@@ -46,107 +64,7 @@
     <div id="cardList"></div>
 </div>
 
-<script>
-$(document).ready(function () {
-    let cards = [];
-    let index = 0;
-
-    // Load the selected JSON file once.
-    $("#jsonFile").change(function () {
-        const file = this.files[0];
-        if (!file) return;
-
-        const reader = new FileReader();
-
-        reader.onload = function (e) {
-            try {
-                const data = JSON.parse(e.target.result);
-
-                if (!Array.isArray(data.cards)) {
-                    throw new Error("JSON must contain a cards array.");
-                }
-
-                cards = data.cards;
-                index = 0;
-
-                $("#termBox").text("File loaded. Click Flash Card.");
-                $("#definitionBox").hide();
-                $("#cardList").empty();
-
-            } catch (err) {
-                alert("Invalid JSON file. Expected an object containing a 'cards' array.");
-                console.error(err);
-            }
-        };
-
-        reader.readAsText(file);
-    });
-
-    // Show the current term.
-    $("#flashBtn").click(function () {
-        if (cards.length === 0) {
-            alert("Load a JSON file first.");
-            return;
-        }
-
-        $("#termBox").text(cards[index].term || "");
-        $("#definitionBox").hide();
-    });
-
-    // Show the current definition.
-    $("#defBtn").click(function () {
-        if (cards.length === 0) {
-            alert("Load a JSON file first.");
-            return;
-        }
-
-        $("#definitionBox").text(cards[index].definition || "").show();
-    });
-
-    // Move to the next card.
-    $("#nextBtn").click(function () {
-        if (cards.length === 0) {
-            alert("Load a JSON file first.");
-            return;
-        }
-
-        index++;
-        if (index >= cards.length) {
-            index = 0;
-        }
-
-        $("#termBox").text(cards[index].term || "");
-        $("#definitionBox").hide();
-    });
-
-    // Display all cards.
-    $("#loadBtn").click(function () {
-        if (cards.length === 0) {
-            alert("Load a JSON file first.");
-            return;
-        }
-
-        $("#cardList").empty();
-
-        cards.forEach(function (card) {
-            const cardHtml = `
-                <div class="card flash-card">
-                    <div class="card-body">
-                        <h5 class="card-title"></h5>
-                        <p class="card-text"></p>
-                    </div>
-                </div>
-            `;
-
-            const $card = $(cardHtml);
-            $card.find(".card-title").text(card.term || "");
-            $card.find(".card-text").text(card.definition || "");
-
-            $("#cardList").append($card);
-        });
-    });
-});
-</script>
+<script src="./app/app.js"></script>
 
 </body>
 </html>
