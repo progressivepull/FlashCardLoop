@@ -94,6 +94,10 @@ $(document).ready(function () {
 
     // Display all cards.
     $("#loadBtn").click(function () {
+
+        $("#flashBtn").hide();
+        $("#loadBtn").hide();
+      
         if (cards.length === 0) {
             alert("Load a JSON file first.");
             return;
