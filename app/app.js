@@ -2,8 +2,22 @@ $(document).ready(function () {
     let cards = [];
     let index = 0;
 
+
+    $(".mode-section").hide();
+    $("#flashBtn").hide();
+    $("#defBtn").hide();
+    $("#nextBtn").hide();
+    $("#loadBtn").hide();
+
     // Load the selected JSON file once.
     $("#jsonFile").change(function () {
+
+        $("#jsonFile").hide();
+        $("#jsonFileLabel").hide();
+
+        $("#flashBtn").show();
+        $("#loadBtn").show();
+
         const file = this.files[0];
         if (!file) return;
 
@@ -35,6 +49,14 @@ $(document).ready(function () {
 
     // Show the current term.
     $("#flashBtn").click(function () {
+
+        $("#flashBtn").hide();
+        $("#defBtn").show();
+        $("#nextBtn").show();
+        $("#loadBtn").hide();
+
+        $(".mode-section").show();
+
         if (cards.length === 0) {
             alert("Load a JSON file first.");
             return;
