@@ -6,14 +6,20 @@ body {
     margin-bottom: 20px;
 }
 
-#termBox, #definitionBox {
+#termBox, #definitionBox, #idBox{
     font-size: 1.4rem;
     padding: 20px;
     border-radius: 8px;
 }
 
+#idBox {
+  background: #b4a7d6;
+}
+
 #termBox {
   background: #e3f2fd;
+  margin-top: 15px;
+  
 }
 
 #definitionBox {

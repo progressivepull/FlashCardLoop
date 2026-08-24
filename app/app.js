@@ -2,7 +2,6 @@ $(document).ready(function () {
     let cards = [];
     let index = 0;
 
-
     $(".mode-section").hide();
     $("#flashBtn").hide();
     $("#defBtn").hide();
@@ -34,6 +33,7 @@ $(document).ready(function () {
                 cards = data.cards;
                 index = 0;
 
+                $("#idBox").text("");
                 $("#termBox").text("File loaded. Click Flash Card.");
                 $("#definitionBox").hide();
                 $("#cardList").empty();
@@ -47,7 +47,7 @@ $(document).ready(function () {
         reader.readAsText(file);
     });
 
-    // Show the current term.
+    // Show the current term WITH ID
     $("#flashBtn").click(function () {
 
         $("#flashBtn").hide();
@@ -62,21 +62,29 @@ $(document).ready(function () {
             return;
         }
 
-        $("#termBox").text(cards[index].term || "");
+        const card = cards[index];
+        const id = card.id ?? (index + 1);
+
+        $("#idBox").text(`ID: ${id}`);
+        $("#termBox").text(card.term || "");
         $("#definitionBox").hide();
     });
 
-    // Show the current definition.
+    // Show the current definition WITH ID
     $("#defBtn").click(function () {
         if (cards.length === 0) {
             alert("Load a JSON file first.");
             return;
         }
 
-        $("#definitionBox").text(cards[index].definition || "").show();
+        const card = cards[index];
+        const id = card.id ?? (index + 1);
+
+        $("#idBox").text(`ID: ${id}`);
+        $("#definitionBox").text(card.definition || "").show();
     });
 
-    // Move to the next card.
+    // Move to the next card WITH ID
     $("#nextBtn").click(function () {
         if (cards.length === 0) {
             alert("Load a JSON file first.");
@@ -88,16 +96,20 @@ $(document).ready(function () {
             index = 0;
         }
 
-        $("#termBox").text(cards[index].term || "");
+        const card = cards[index];
+        const id = card.id ?? (index + 1);
+
+        $("#idBox").text(`ID: ${id}`);
+        $("#termBox").text(card.term || "");
         $("#definitionBox").hide();
     });
 
-    // Display all cards.
+    // Display all cards WITH ID paragraph
     $("#loadBtn").click(function () {
 
         $("#flashBtn").hide();
         $("#loadBtn").hide();
-      
+
         if (cards.length === 0) {
             alert("Load a JSON file first.");
             return;
@@ -105,21 +117,20 @@ $(document).ready(function () {
 
         $("#cardList").empty();
 
-        cards.forEach(function (card) {
+        cards.forEach(function (card, i) {
+            const id = card.id ?? (i + 1);
+
             const cardHtml = `
-                <div class="card flash-card">
+                <div class="card flash-card mb-2">
                     <div class="card-body">
-                        <h5 class="card-title"></h5>
-                        <p class="card-text"></p>
+                        <p class="card-id"><strong>ID:</strong> ${id}</p>
+                        <h5 class="card-title">${card.term || ""}</h5>
+                        <p class="card-text">${card.definition || ""}</p>
                     </div>
                 </div>
             `;
 
-            const $card = $(cardHtml);
-            $card.find(".card-title").text(card.term || "");
-            $card.find(".card-text").text(card.definition || "");
-
-            $("#cardList").append($card);
+            $("#cardList").append(cardHtml);
         });
     });
 });
