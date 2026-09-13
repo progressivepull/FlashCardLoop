@@ -1,3 +1,3 @@
 # FlashCardLoop
 
-<a href="https://progressivepull.github.io/FlashGeneratorLoop/">Flashcards Application</a>
+<a href="https://progressivepull.github.io/FlashCardLoop/">Flashcards Application</a>
