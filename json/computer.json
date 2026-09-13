@@ -1,7 +1,0 @@
-{
-  "cards": [
-    { "id": 1, "term": "CPU", "definition": "Central Processing Unit" },
-    { "id": 2, "term": "RAM", "definition": "Random Access Memory" },
-    { "id": 3, "term": "Cache", "definition": "High‑speed memory for frequently used data" }
-  ]
-}

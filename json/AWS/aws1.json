@@ -1,0 +1,44 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "term": "IAM",
+      "definition": "IAM (Identity and Access Management) is a security framework that manages user and application identities, authentication, and permissions to control access to cloud resources and services."
+    },
+    {
+      "id": 2,
+      "term": "Amazon EC2",
+      "definition": "Amazon EC2 (Elastic Compute Cloud) is an AWS service that provides scalable virtual servers in the cloud for running applications, workloads, and services on demand."
+    },
+    {
+      "id": 3,
+      "term": "Amazon S3",
+      "definition": "Amazon S3 (Simple Storage Service) is an AWS object storage service that securely stores and retrieves large amounts of data with high durability, scalability, and availability."
+    },
+    {
+      "id": 4,
+      "term": "Amazon CloudWatch",
+      "definition": "Amazon CloudWatch is an AWS monitoring service that collects metrics, logs, and events to help monitor, troubleshoot, and optimize cloud applications and infrastructure."
+    },
+    {
+      "id": 5,
+      "term": "Regions",
+      "definition": "Regions are separate geographic locations where cloud providers operate data centers, allowing organizations to deploy applications and data closer to users for improved performance, availability, and compliance. Examples of cloud regions include:\nAWS: US East (N. Virginia), US West (Oregon), Europe (Frankfurt), Asia Pacific (Tokyo)\nMicrosoft Azure: East US, West Europe, Central US, Southeast Asia\nGoogle Cloud Platform (GCP): us-central1 (Iowa), us-east1 (South Carolina), europe-west1 (Belgium), asia-east1 (Taiwan)"
+    },
+    {
+      "id": 6,
+      "term": "Availability Zones (AZs)",
+      "definition": "Availability Zones (AZs) are separate, isolated data centers within the same cloud region that provide redundancy, fault tolerance, and high availability by distributing workloads across multiple locations."
+    },
+    {
+      "id": 7,
+      "term": "IaaS",
+      "definition": "IaaS (Infrastructure as a Service) is a cloud computing model that provides on-demand virtual servers, storage, networking, and other infrastructure resources over the internet, eliminating the need to manage physical hardware."
+    },
+    {
+      "id": 8,
+      "term": "AMI",
+      "definition": "AMI (Amazon Machine Image) is a preconfigured template used to launch Amazon EC2 instances, containing the operating system, software, and configuration needed to create virtual servers."
+    }
+  ]
+}
