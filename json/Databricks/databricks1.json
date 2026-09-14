@@ -1,124 +1,129 @@
 {
   "cards": [
     {
-	  "id": 1,
+      "id": 1,
       "term": "Data Lake",
       "definition": "A Data Lake is a centralized repository that stores large volumes of structured, semi-structured, and unstructured data in its original format."
     },
     {
-	  "id": 2,
+      "id": 2,
       "term": "Data Warehouse",
       "definition": "A Data Warehouse is a centralized repository that stores cleaned, structured, and organized data optimized for fast querying, reporting, business intelligence (BI), and analytical workloads."
     },
     {
-	  "id": 3,
+      "id": 3,
       "term": "Data Lakehouse",
       "definition": "A Data Lakehouse is a unified data platform that combines the scalability and flexibility of a data lake with the performance, reliability, and management features of a data warehouse, enabling analytics, AI, and machine learning on a single copy of data."
     },
     {
-	  "id": 4,
+      "id": 4,
       "term": "Data Swamp",
       "definition": "A Data Swamp is a poorly managed data lake where data is unorganized, undocumented, and difficult to find or trust, making it challenging to use for analytics or decision-making."
     },
     {
-	  "id": 5,
+      "id": 5,
       "term": "Catalog Type",
       "definition": "A Catalog Type identifies how a catalog is managed and where its data originates, such as a standard Unity Catalog, a foreign catalog connected to an external system, or a shared catalog received through Delta Sharing."
     },
     {
-	  "id": 6,
+      "id": 6,
       "term": "Delta Live Tables (DLT)",
       "definition": "Delta Live Tables (DLT) is a Databricks framework for building, managing, and automating reliable data pipelines. It simplifies ETL development by automatically handling orchestration, monitoring, data quality, and dependency management."
     },
     {
-	  "id": 7,
+      "id": 7,
       "term": "Root Folder",
       "definition": "A Root Folder is the top-level directory in a file system or storage location that serves as the starting point for organizing and accessing all subfolders and files."
     },
     {
-	  "id": 8,
+      "id": 8,
       "term": "Source Code",
       "definition": "Source Code is the human-readable programming code written by developers to create software, applications, scripts, or data pipelines before it is executed or compiled."
     },
     {
-	  "id": 9,
+      "id": 9,
       "term": "Business Intelligence (BI)",
       "definition": "Business Intelligence (BI) is the process of collecting, analyzing, and visualizing data to help organizations make informed business decisions through reports, dashboards, and analytics."
     },
     {
-	  "id": 10,
+      "id": 10,
       "term": "Artificial Intelligence (AI)",
       "definition": "Artificial Intelligence (AI) is the simulation of human intelligence by computer systems, enabling them to learn, reason, recognize patterns, and make decisions or predictions from data."
     },
     {
-	  "id": 11,
+      "id": 11,
       "term": "Machine Learning (ML)",
       "definition": "Machine Learning (ML) is a branch of artificial intelligence that enables computers to learn from data, identify patterns, and make predictions or decisions without being explicitly programmed."
     },
     {
-	  "id": 12,
+      "id": 12,
       "term": "Data Engineer",
       "definition": "A Data Engineer is a professional who designs, builds, and maintains data pipelines, storage systems, and data platforms to ensure reliable, scalable, and efficient data processing for analytics and AI."
     },
     {
-	  "id": 13,
+      "id": 13,
       "term": "Data Analyst",
       "definition": "A Data Analyst is a professional who collects, analyzes, and interprets data to identify trends, create reports and dashboards, and help organizations make data-driven decisions."
     },
     {
-	  "id": 14,
+      "id": 14,
       "term": "Data Scientist",
       "definition": "A Data Scientist is a professional who uses statistics, machine learning, and programming to analyze data, build predictive models, and generate insights that solve complex business problems."
     },
     {
-	  "id": 15,
+      "id": 15,
       "term": "Apache Iceberg",
       "definition": "Apache Iceberg is an open table format for large-scale analytics that provides ACID transactions, schema evolution, time travel, and efficient querying for data stored in data lakes."
     },
     {
-	  "id": 16,
+      "id": 16,
       "term": "ACID Transactions",
       "definition": "ACID transactions are database operations that guarantee Atomicity, Consistency, Isolation, and Durability, ensuring data remains accurate, reliable, and protected even if failures occur."
     },
     {
-	  "id": 17,
+      "id": 17,
       "term": "Cloud Providers for Databricks",
       "definition": "Cloud providers for Databricks are the cloud platforms that host Databricks services, including Microsoft Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP)."
     },
     {
-	  "id": 18,
+      "id": 18,
       "term": "Databricks Account",
       "definition": "A Databricks Account is the top-level administrative environment used to manage workspaces, users, groups, billing, Unity Catalog, and account-wide settings across an organization."
     },
     {
-	  "id": 19,
+      "id": 19,
       "term": "Control Plane",
       "definition": "The Control Plane is the Databricks-managed layer that handles workspace management, authentication, job orchestration, notebooks, metadata, and platform services, while keeping customer data separate from compute resources."
     },
     {
-	  "id": 20,
+      "id": 20,
       "term": "Data Plane",
       "definition": "The Data Plane is the customer-managed environment where Databricks compute resources process, store, and access data, running workloads such as notebooks, jobs, and SQL queries."
     },
     {
-	  "id": 21,
+      "id": 21,
       "term": "Account Administrator",
       "definition": "An Account Administrator is a user with the highest level of account permissions who manages Databricks accounts, workspaces, users, groups, billing, Unity Catalog, and account-wide settings."
     },
     {
-	  "id": 22,
+      "id": 22,
       "term": "Metastore Administrator",
       "definition": "A Metastore Administrator is a user with permissions to manage a Unity Catalog metastore, including catalogs, storage configurations, privileges, and metadata governance across workspaces."
     },
     {
-	  "id": 23,
+      "id": 23,
       "term": "Service Principal",
       "definition": "A Service Principal is a non-human identity used by applications, scripts, and automated processes to securely authenticate and access Databricks resources without using a user account."
     },
     {
-	  "id": 24,
+      "id": 24,
       "term": "Unity Catalog",
       "definition": "Unity Catalog is Databricks' centralized data governance solution that provides unified access control, metadata management, auditing, and data discovery across all data and AI assets."
+    },
+    {
+      "id": 25,
+      "term": "Databricks Auto Loader",
+      "definition": "Databricks Auto Loader is a cloud-native data ingestion engine that incrementally and efficiently processes new data files as they land in cloud object storage without any manual pipeline intervention."
     }
   ]
 }
