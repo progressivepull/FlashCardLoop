@@ -1,0 +1,29 @@
+{
+  "cards": [
+    {
+      "id": 1,
+      "term": "Account Administrator Role",
+      "definition": "An Account Admin operates at the Databricks account level, which sits above all workspaces. This role can:\n1. Create and manage workspaces 2. Create and link Unity Catalog metastores 3. Assign workspace admin and account admin roles 4. Manage identity provisioning (SCIM, service principals, groups) 4. View and monitor account usage, audit logs, and system tables 5.Configure billing, subscription, serverless quotas, and previews"
+    },
+    {
+      "id": 2,
+      "term": "Metastores",
+      "definition": "Metastores are the central governance backbone of Databricks Unity Catalog — the layer that controls how data is organized, secured, and accessed across all workspaces in your Databricks account. A metastore is a top‑level container in Unity Catalog that stores: 1. Catalogs 2. Schemas 3. Tables 4. Volumes 5. Permissions 6. External locations 7. Data lineage metadata"
+    },
+    {
+      "id": 3,
+      "term": "Metastore Administrator Role",
+      "definition": "The Metastore Administrator (often called Metastore Admin) is a high‑privilege Unity Catalog role that governs all data objects inside a single Databricks metastore. It sits below the Account Admin but above Workspace Admins in terms of data-governance authority."
+    },
+    {
+      "id": 4,
+      "term": "Workspace Administrator Role",
+      "definition": "The Workspace Administrator (Workspace Admin) is the primary operational admin role inside a single Databricks workspace. If the Account Admin governs the whole account and the Metastore Admin governs data, the Workspace Admin governs the environment where people actually work—clusters, jobs, notebooks, repos, permissions, and workspace-level identities."
+    },
+    {
+      "id": 5,
+      "term": "Owner Role",
+      "definition": "The Owner role in Databricks is one of the most powerful object‑level permissions in Unity Catalog. Unlike Account Admin or Workspace Admin—which govern environments—the Owner role governs a specific object (catalog, schema, table, volume, view, function, etc.) and gives full control over that object."
+    }
+  ]
+}
