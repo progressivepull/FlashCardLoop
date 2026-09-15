@@ -24,6 +24,31 @@
       "id": 5,
       "term": "Owner Role",
       "definition": "The Owner role in Databricks is one of the most powerful object‑level permissions in Unity Catalog. Unlike Account Admin or Workspace Admin—which govern environments—the Owner role governs a specific object (catalog, schema, table, volume, view, function, etc.) and gives full control over that object."
+    },
+    {
+      "id": 6,
+      "term": "SCIM (System for Cross‑domain Identity Management)",
+      "definition": "it’s a standard way to automatically create, update, and remove user accounts across different systems."
+    },
+    {
+      "id": 7,
+      "term": "Azure Resource Group",
+      "definition": "A Resource Group (RG) is a logical container that holds Azure resources—VMs, storage accounts, VNets, databases, anything."
+    },
+    {
+      "id": 8,
+      "term": "Azure Private Subnet",
+      "definition": "An Azure private subnet keeps your data systems off the public internet. You need Databricks when you want to process, transform, analyze, or govern the data inside those private subnets at scale."
+    },
+    {
+      "id": 9,
+      "term": "Azure Public Subnet",
+      "definition": "An Azure public subnet exposes resources to the internet (with public IPs)."
+    },
+    {
+      "id": 10,
+      "term": "Databricks Workspace",
+      "definition": "A Databricks workspace is the core environment where all your data engineering, analytics, and machine‑learning work actually happens. A workspace is a fully managed development environment that contains: 1. Notebooks (Python, SQL, Scala, R) 2. Clusters (compute) 3. Jobs (scheduled pipelines) 4. Repos (Git integration) 5. Dashboards 6. Data access (Unity Catalog) 7. MLflow experiments & models"
     }
   ]
 }
