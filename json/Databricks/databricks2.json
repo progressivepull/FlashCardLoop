@@ -49,6 +49,36 @@
       "id": 10,
       "term": "Databricks Workspace",
       "definition": "A Databricks workspace is the core environment where all your data engineering, analytics, and machine‑learning work actually happens. A workspace is a fully managed development environment that contains: 1. Notebooks (Python, SQL, Scala, R) 2. Clusters (compute) 3. Jobs (scheduled pipelines) 4. Repos (Git integration) 5. Dashboards 6. Data access (Unity Catalog) 7. MLflow experiments & models"
+    },
+    {
+      "id": 11,
+      "term": "Databricks Account Console Workspaces",
+      "definition": "Databricks Account Console Workspaces are the cloud environments you create from the Databricks Account Console to run notebooks, jobs, SQL warehouses, pipelines, dashboards, and ML workloads. They are the “rooms” where people actually work, while the Account Console is the control plane that manages all of them."
+    },
+    {
+      "id": 12,
+      "term": "Databricks Account Console Catalog",
+      "definition": "A Databricks Account Console Catalog is not a separate object type inside the Account Console. Instead, the Account Console manages Unity Catalog metastores, and catalogs are objects inside those metastores. So when someone says “Account Console Catalog,” they are referring to catalogs as they appear in the Account Console’s governance layer (Unity Catalog)."
+    },
+    {
+      "id": 13,
+      "term": "Databricks Account Console User Management",
+      "definition": "Databricks Account Console User Management is the centralized identity and access control layer for your entire Databricks account. It’s where Account Admins manage who can access Databricks, what roles they have, and which workspaces they belong to — all from one unified control plane.\n\nThis is one of the most important parts of Databricks governance because it ensures consistent identity, security, and compliance across every workspace."
+    },
+    {
+      "id": 14,
+      "term": "Databricks Account Console Cloud Resources",
+      "definition": "Databricks Account Console Cloud Resources refers to the cloud infrastructure configurations that Account Admins manage at the account level to support workspace deployment, networking, storage, compute credentials, and secure connectivity. These resources define how Databricks integrates with your cloud provider (AWS, Azure, GCP) and are required for classic workspaces, private networking, and secure data access."
+    },
+    {
+      "id": 15,
+      "term": "Databricks Account Console Previews",
+      "definition": "Databricks Account Console Previews are the early‑access, account‑level feature toggles that let Account Admins enable new Databricks capabilities before they become generally available (GA). They act as a controlled way to test upcoming platform features across workspaces, governance layers, and cloud integrations.\n\nThey’re essentially the feature flags for the Databricks platform — but only at the account layer, not workspace settings."
+    },
+    {
+      "id": 16,
+      "term": "Databricks Account Console Settings",
+      "definition": "Databricks Account Console Settings is the central configuration hub for your entire Databricks account. It’s where Account Admins control global behaviors, security posture, feature availability, and platform-wide defaults that apply across all workspaces and metastores.\n\nIf the Account Console is the “control plane,” then Settings is the “master switchboard.”"
     }
   ]
 }
