@@ -79,6 +79,26 @@
       "id": 16,
       "term": "Databricks Account Console Settings",
       "definition": "Databricks Account Console Settings is the central configuration hub for your entire Databricks account. It’s where Account Admins control global behaviors, security posture, feature availability, and platform-wide defaults that apply across all workspaces and metastores.\n\nIf the Account Console is the “control plane,” then Settings is the “master switchboard.”"
+    },
+    {
+      "id": 17,
+      "term": "Compute - All purpose computer",
+      "definition": "All‑Purpose Compute in Databricks is the general‑use, interactive compute used for notebooks, ad‑hoc exploration, development, debugging, and collaborative data work. It’s the compute you use when you want flexibility rather than strict job scheduling.\n\nIt’s the “workhorse” compute type for day‑to‑day engineering and data science."
+    },
+    {
+      "id": 18,
+      "term": "Compute - Job Compute",
+      "definition": "Job Compute is Databricks’ production‑grade compute designed specifically for scheduled jobs, pipelines, workflows, and automation. Unlike All‑Purpose Compute—which is interactive and multi‑user—Job Compute is optimized for reliability, cost efficiency, and isolated execution.\n\nIt’s the compute you use when you want something to run on time, consistently, and cheaply."
+    },
+    {
+      "id": 19,
+      "term": "Compute - SQL Warehouses",
+      "definition": "SQL Warehouses in Databricks are the dedicated, scalable compute engines optimized for running SQL queries, powering dashboards, and serving BI workloads. They’re built for analysts, BI tools, and SQL-heavy pipelines — not notebooks or Spark development.\n\nThink of SQL Warehouses as Databricks’ cloud-native data warehouse compute, similar in spirit to Snowflake’s virtual warehouses or BigQuery slots."
+    },
+    {
+      "id": 20,
+      "term": "Compute - Pools Policies",
+      "definition": "Compute Pools & Policies in Databricks are the cost‑control and performance‑optimization layer for compute. They let Workspace Admins standardize how clusters are created and reduce startup time and cloud costs.\n\nYou’re asking about Pools Policies, which means you want the combined picture: 1 Pools → speed & cost efficiency 2. Policies → governance & restrictions"
     }
   ]
 }
