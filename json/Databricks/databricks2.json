@@ -99,6 +99,11 @@
       "id": 20,
       "term": "Compute - Pools Policies",
       "definition": "Compute Pools & Policies in Databricks are the cost‑control and performance‑optimization layer for compute. They let Workspace Admins standardize how clusters are created and reduce startup time and cloud costs.\n\nYou’re asking about Pools Policies, which means you want the combined picture: 1 Pools → speed & cost efficiency 2. Policies → governance & restrictions"
+    },
+    {
+      "id": 21,
+      "term": "What are the three main levels in the Unity Catalog data organization hierarchy?",
+      "definition": "1. Catalog (Used to organize data for a business domain, department, or environment. Examples: sales, finance, and marketing)  2. Schema (Database) - A subdivision within a catalog. Examples:  sales.customers, sales.orders and sales.customers 3. Tables and Views - The actual data objects."
     }
   ]
 }
