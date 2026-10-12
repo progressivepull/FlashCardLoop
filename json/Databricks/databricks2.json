@@ -104,6 +104,31 @@
       "id": 21,
       "term": "What are the three main levels in the Unity Catalog data organization hierarchy?",
       "definition": "1. Catalog (Used to organize data for a business domain, department, or environment. Examples: sales, finance, and marketing)  2. Schema (Database) - A subdivision within a catalog. Examples:  sales.customers, sales.orders and sales.customers 3. Tables and Views - The actual data objects."
+    },
+    {
+      "id": 22,
+      "term": "All-Purpose Compute",
+      "definition": "Purpose : Interactive clusters shared by users / Typical Use: Notebook development, data exploration, testing"
+    },
+    {
+      "id": 23,
+      "term": "Job Compute",
+      "definition": "Purpose: Temporary clusters created for a job and terminated afterward/ Typical Use: ETL pipelines, scheduled jobs, production workflows"
+    },
+    {
+      "id": 24,
+      "term": "SQL Warehouse (Compute)",
+      "definition": "Purpose: Optimized compute for SQL analytics/ Typical Use: Dashboards, BI tools, SQL queries"
+    },
+    {
+      "id": 25,
+      "term": "Serverless Compute",
+      "definition": "Purpose: Databricks manages infrastructure automatically / Typical Use: Fast startup, reduced administration"
+    },
+    {
+      "id": 26,
+      "term": "Classic Compute",
+      "definition": "Purpose: Traditional cluster model/ Typical Use: Legacy workloads and custom configurations"
     }
   ]
 }
